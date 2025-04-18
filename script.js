@@ -13,7 +13,10 @@ window.onload = () => {
 const update = event => {
   const element = event.target;
   const value = element.value.replace(/[\s-\(\)]/g, "");
+  //drawNumber(value);
+}
 
+const drawNumber = input => {
 }
 
 const clear = () => {
@@ -21,20 +24,17 @@ const clear = () => {
 }
 
 const isValid = () => {
-  const cleaned = input.value.replace(/[^\d-\(\)]/g, "");
-  console.log(cleaned + ` : ${testNum}`);
-  testNum++;
   //leading1 ,space/dash, 3 digits either wrapped in para or not, space/dash, 3 digits, space/dash, 4 digits
   const validRegex = /^1?[\s-]?(\(\d{3}\)|\d{3})[\s-]?\d{3}[\s-]?\d{4}$/;
   if(input.value.length <= 0) {
     alert("Please provide a phone number");
   }
-  if (validRegex.test(cleaned)){
-    console.log("valid");
+  if (validRegex.test(input.value)){
+    //console.log("valid");
     results.textContent = `Valid US number: ${input.value}`;
     return true;
   }else{
-    console.log("invalid");
+    //console.log("invalid");
     results.textContent = `Invalid US number: ${input.value}`;
     return false;
   }
