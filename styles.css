@@ -1,43 +1,67 @@
 *, ::before, ::after {
-    box-sizing: inherit;
-    padding: 0;
-    margin: 0;
-  }
-    
-  html {
-    box-sizing: border-box;
-    background-color: #f4efdf;
-    color: #121c1d;
-  }
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
   
-  .hidden {
-    opacity: 10; 
-    background-color: rgba(255,255,255,0);
-    margin: 10px;
-  }
-  
-  main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #container {
-    display: flex;
-    justify-content: center;
-    height: 4rem;
-  }
-  
-  .num {
-    display: flex;
-    width: 3rem;
-    height: 3rem;
-    font-size: 2.5rem;
-    font-family: Helvetica;
-    border-radius: 30%;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid rgba(0,0,0,20%);
-    margin: 5px;
-  }
+html {
+  box-sizing: border-box;
+  background-color: #f4efdf;
+  color: #121c1d;
+}
+
+.hidden {
+  opacity: 10; 
+  background-color: rgba(255,255,255,0);
+  margin: 10px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1, #check-btn, #clear-btn{
+  margin: 25px 0;
+  text-align: center;
+}
+
+.formats {
+  text-align: center;
+  padding: 25px;
+  background-color: #decdb3;
+}
+
+#user-input {
+  margin-bottom: 40px;
+  background-color: none;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  height: 4rem;
+}
+
+.num {
+  display: flex;
+  width: 3rem;
+  height: 3rem;
+  font-size: 2.5rem;
+  font-family: Helvetica;
+  border-radius: 30%;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0,0,0,20%);
+}
+
+.int {
+  padding-top: 5px;
+}

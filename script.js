@@ -9,6 +9,19 @@ let testNum = 1
 window.onload = () => {
   input.oninput = update;
   submitBtn.addEventListener('click', isValid);
+  submitBtn.addEventListener('click', () => {
+    const val = isValid();
+    const numbers = document.querySelectorAll(".num");
+    if(val){
+      numbers.forEach(el => {
+        el.style.backgroundColor = "green";
+      })
+    }else{
+      numbers.forEach(el => {
+        el.style.backgroundColor = "red";
+      })
+    }
+  });
   clearBtn.addEventListener('click', clear);
   document.addEventListener('click', () => {
     input.focus();
@@ -19,6 +32,7 @@ const update = event => {
   const element = event.target;
   const value = element.value.replace(/[\s-\(\)]/g, "");
   drawNumber(value);
+  
 }
 
 const drawNumber = input => {
@@ -39,6 +53,7 @@ const drawNumber = input => {
         if(length === 11 && added === false){
           const number = document.createElement("div");
           number.className = "num";
+          number.classList.add("int");
           number.textContent = input[i];
           container.appendChild(number);
           input = input.slice(1);
@@ -67,6 +82,7 @@ const drawNumber = input => {
     }  
     const number = document.createElement("div");
     number.className = "num";
+    number.classList.add("int");
     number.textContent = input[i];
     container.appendChild(number);
   }
